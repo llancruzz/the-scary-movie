@@ -180,7 +180,7 @@ def user_data():
 
 def validate_number(numbers):
     """"
-    Validate mobile number
+    Validate mobile phone number
     """
     try:
         if len(numbers) != 10:
