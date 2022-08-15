@@ -37,7 +37,7 @@ movie_list = {
 def enter_or_exit():
     """"
     Function to either continue to reserve
-    or leave the Cinema Book
+    or leave the Cinema Booking
     """
     while True:
         print("Hey phobophile's fans. Welcome to The Scary Movie! \U0001F3A6")
@@ -66,7 +66,7 @@ def enter_or_exit():
 
 def order_movie():
     """"
-    Function to select a movie or leave the cinema store
+    Function to select a movie or leave the cinema booking.
     """
     while True:
         print()
@@ -80,7 +80,7 @@ def order_movie():
         )
         print()
         global select_movie
-        select_movie = input("Please enter the number/other key: ")
+        select_movie = input("Please enter the number or other key: ")
         select_movie = select_movie.strip()
         if select_movie == "1":
             select_movie = movie_list.get('1.')
@@ -115,7 +115,7 @@ def order_movie():
             print(f"You have selected: {select_movie} \U0001F608")
             break
         else:
-            print("No worries. Have a lovely day \U0001F44B")
+            print("No worries. Have a nice day \U0001F44B")
             sys.exit()
 
     return select_movie
@@ -123,7 +123,7 @@ def order_movie():
 
 def user_data():
     """"
-    Function to take and check user's details
+    Function to get and check user's details
     """
     while True:
         print()
@@ -198,7 +198,7 @@ def validate_number(numbers):
 def update_sheet(name1, name2, number, title, worksheet):
     """"
     Function to update the Google Sheet
-    with the user's details and selected title
+    with the user's details and selected movie.
     """
     add_data = SHEET.worksheet(worksheet)
     add_data.append_row([name1, name2, number, title])
@@ -206,13 +206,13 @@ def update_sheet(name1, name2, number, title, worksheet):
 
 def print_receipt():
     """"
-    Function to print the receipt
+    Function to print the receipt selected by user
     """
     print(
         """Thank you for supporting your local Scary Cinema! \U0001F917\n"""
         """Your reserve has been booked. """
-        """Within the next minutes you will receive you order.\n"""
-        """We'll send you a text message 1 hour before the movie starts \U0001F4F2"""
+        """Within the next minutes you will receive your reservation.\n"""
+        """We'll send to you a text message 1 hour before the movie starts \U0001F4F2"""
     )
     print()
     print("And here is your receipt \U0001F9FE:")
@@ -240,16 +240,16 @@ def main():
     select_movie = order_movie()
     print()
     print(
-        """(-> Please note: for the purpose of this """
+        """ ➡️ Please note: for the purpose of this """
         """project your name and number will be\n"""
-        """added to an external sheet so feel """
+        """added to an external sheet. So feel """
         """free to add fictional details if """
         """you prefer.\nNo data will be shared """
-        """with anyone but me.)"""
+        """with anyone unless me."""
     )
     time.sleep(5)
     print()
-    print("To complete the booking registration, please enter your details... \U0001F58A")
+    print("To complete the booking, please enter your details... \U0001F58A")
     fname, lname, mnumber = user_data()
     update_sheet(fname, lname, mnumber, select_movie, "record")
     print_receipt()
@@ -260,10 +260,10 @@ while True:
     print(welcome_title)
     main()
     print(
-        """If you want to place another order """
+        """If you want to place another reservation """
         """enter 1. If not enter any other key."""
     )
-    stay_or_leave = input("Please choose now: ")
+    stay_or_leave = input("Please enter now: ")
     stay_or_leave = stay_or_leave.strip()
     if stay_or_leave == "1":
         continue
