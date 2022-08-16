@@ -12,14 +12,14 @@ from google.oauth2.service_account import Credentials
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
+    "https://www.googleapis.com/auth/drive",
 ]
 
 
-CREDS = Credentials.from_service_account_file('creds.json')
+CREDS = Credentials.from_service_account_file("creds.json")
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('the_scary_movie')
+SHEET = GSPREAD_CLIENT.open("the_scary_movie")
 
 
 movie_list = {
@@ -35,7 +35,7 @@ movie_list = {
 
 
 def enter_or_exit():
-    """"
+    """ "
     Function to either continue to reserve
     or leave the Cinema Booking
     """
@@ -47,15 +47,16 @@ def enter_or_exit():
             """Enter Y to see our movies this week or N to exit: """
         )
         decision_user = decision_user.strip()
-        if (decision_user == "Y" or decision_user == "y"):
+        if decision_user == "Y" or decision_user == "y":
             print("Let me find the movies for you....\n")
             time.sleep(1)
             for index_list, title in movie_list.items():
                 print(index_list, title)
             break
-        elif (decision_user == "N" or decision_user == "n"):
+        elif decision_user == "N" or decision_user == "n":
             print(
-                "Why? Don’t be afraid!!! Take your time! Book whenever you’re already. Enjoy your day! \U0001F64B")
+                "Why? Don’t be afraid!!! Take your time! Book whenever you’re already. Enjoy your day! \U0001F64B"
+            )
             sys.exit()
         else:
             print("I'm not sure you're want to see the movies! \U0001F914")
@@ -65,7 +66,7 @@ def enter_or_exit():
 
 
 def order_movie():
-    """"
+    """ "
     Function to select a movie or leave the cinema booking.
     """
     while True:
@@ -83,35 +84,35 @@ def order_movie():
         select_movie = input("Please enter the number or other key: ")
         select_movie = select_movie.strip()
         if select_movie == "1":
-            select_movie = movie_list.get('1.')
+            select_movie = movie_list.get("1.")
             print(f"You have selected: {select_movie} \U0001F608")
             break
         elif select_movie == "2":
-            select_movie = movie_list.get('2.')
+            select_movie = movie_list.get("2.")
             print(f"You have selected: {select_movie} \U0001F608")
             break
         elif select_movie == "3":
-            select_movie = movie_list.get('3.')
+            select_movie = movie_list.get("3.")
             print(f"You have selected: {select_movie} \U0001F608")
             break
         elif select_movie == "4":
-            select_movie = movie_list.get('4.')
+            select_movie = movie_list.get("4.")
             print(f"You have selected: {select_movie} \U0001F608")
             break
         elif select_movie == "5":
-            select_movie = movie_list.get('5.')
+            select_movie = movie_list.get("5.")
             print(f"You have selected: {select_movie} \U0001F608")
             break
         elif select_movie == "6":
-            select_movie = movie_list.get('6.')
+            select_movie = movie_list.get("6.")
             print(f"You have selected: {select_movie} \U0001F608")
             break
         elif select_movie == "7":
-            select_movie = movie_list.get('7.')
+            select_movie = movie_list.get("7.")
             print(f"You have selected: {select_movie} \U0001F608")
             break
         elif select_movie == "8":
-            select_movie = movie_list.get('8.')
+            select_movie = movie_list.get("8.")
             print(f"You have selected: {select_movie} \U0001F608")
             break
         else:
@@ -122,7 +123,7 @@ def order_movie():
 
 
 def user_data():
-    """"
+    """ "
     Function to get and check user's details
     """
     while True:
@@ -179,7 +180,7 @@ def user_data():
 
 
 def validate_number(numbers):
-    """"
+    """ "
     Validate mobile phone number
     """
     try:
@@ -196,7 +197,7 @@ def validate_number(numbers):
 
 
 def update_sheet(name1, name2, number, title, worksheet):
-    """"
+    """ "
     Function to update the Google Sheet
     with the user's details and selected movie.
     """
@@ -205,7 +206,7 @@ def update_sheet(name1, name2, number, title, worksheet):
 
 
 def print_receipt():
-    """"
+    """ "
     Function to print the receipt selected by user
     """
     print(
@@ -232,7 +233,7 @@ def print_receipt():
 
 
 def main():
-    """"
+    """ "
     Main function, which includes
     all functions to run the program
     """
@@ -271,6 +272,3 @@ while True:
         print()
         print("See you next time. Enjoy your day ! \U0001F64B")
         break
-
-
-
