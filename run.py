@@ -82,14 +82,13 @@ You booked: {select_movie} \U0001F4D6
 
 """
 
+
 def enter_or_exit():
     """Function to either continue to reserve or leave the Cinema Booking."""
 
     while True:
         print("Hey phobophile's fans. Welcome to The Scary Movie! \U0001F3A6")
-        decision_user = input(
-            LIST_MOVIES_MSG
-        )
+        decision_user = input(LIST_MOVIES_MSG)
         decision_user = decision_user.strip().lower()
         if decision_user == "y":
             print("Let me find the movies for you....\n")
@@ -115,18 +114,15 @@ def order_movie():
     Function to select a movie or leave the cinema booking.
     """
     while True:
-        print(
-            ORDER_MOVIE_MESSAGE
-        )
+        print(ORDER_MOVIE_MESSAGE)
         select_movie = input("Please enter the number or other key: ").strip()
         if select_movie in MOVIE_LIST:
             selected_movie = MOVIE_LIST[select_movie]
             print(f"You have selected: {selected_movie} \U0001F608")
             return selected_movie
-        
+
         print("No worries. Have a nice day \U0001F44B")
         sys.exit()
-
 
 
 def user_data():
@@ -214,7 +210,9 @@ def print_receipt(selected_movie):
     time.sleep(2)
     now = datetime.now()
     booking_time = now.strftime("%d.%m.%Y %H:%M:%S")
-    print(BOOKING_RECIEPT.format(select_movie=selected_movie, booking_date=booking_time))
+    print(
+        BOOKING_RECIEPT.format(select_movie=selected_movie, booking_date=booking_time)
+    )
 
 
 def start_app():
@@ -242,6 +240,7 @@ def main():
         else:
             print("\nSee you next time. Enjoy your day ! \U0001F64B")
             break
+
 
 if __name__ == "__main__":
     main()
