@@ -36,22 +36,22 @@ MOVIE_LIST = {
 }
 
 REPEAT_RESERVATION_MSG = """
-If you want to place another reservation 
-enter 1. If not enter any other key.
+If you want to place another reservation,
+enter 1. If not, enter any other key.
 """
 
 LIST_MOVIES_MSG = """
-Are you tired of boring movies? 
-Do you really want to feel scared with some movies? 
-Enter Y to see our movies this week or N to exit: 
+Are you tired of boring movies?
+Do you want to feel scared in some movies?
+Enter Y to see our movies this week or N to exit:
 """
 
 ORDER_MOVIE_MESSAGE = """
 
 If you wish to place a reservation, please enter the number of the movie you
-wish to booking (i.e. 1 for 'The Innocents' 2 for 'Hellbender' and so on.). 
+wish to the booking (i.e. 1 for 'The Innocents' 2 for 'Hellbender' and so on.).
 
-If there is nothing in our list for you this week, no worries.
+If there is nothing on our list for you this week, no worries.
 
 Press any other key to leave the reserve. \U0001F642
 
@@ -60,10 +60,10 @@ Press any other key to leave the reserve. \U0001F642
 BOOKING_CONFIRMATION_MSG = """
 Thank you for supporting your local Scary Cinema! \U0001F917
 
-Your reserve has been booked. 
-Within the next minutes you will receive your reservation.
+Your reserve has been booked.
+Within the next minutes, you will receive your reservation.
 
-We'll send to you a text message 1 hour before the movie starts \U0001F4F2
+We'll send you a text message 1 hour before the movie starts \U0001F4F2
 
 And here is your receipt \U0001F9FE:
 """
@@ -104,7 +104,7 @@ def enter_or_exit():
             sys.exit()
         else:
             print(
-                "I'm not sure you're want to see the movies! \U0001F914"
+                "I'm not sure you want to see the movies! \U0001F914"
                 "Let's try again. Please make sure to enter Y or N \n"
             )
 
@@ -116,7 +116,7 @@ def order_movie():
     while True:
         print(ORDER_MOVIE_MESSAGE)
         select_movie = input("Please enter the number or other key: ").strip()
-        if select_movie in MOVIE_LIST:
+        if f"{select_movie}." in MOVIE_LIST:
             selected_movie = MOVIE_LIST[select_movie]
             print(f"You have selected: {selected_movie} \U0001F608")
             return selected_movie
