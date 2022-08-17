@@ -43,7 +43,7 @@ enter 1. If not, enter any other key.
 LIST_MOVIES_MSG = """
 Are you tired of boring movies?
 Do you want to feel scared in some movies?
-Enter Y to see our movies this week or N to exit:
+Enter Y to see our movies lineup next week or N to exit:
 """
 
 ORDER_MOVIE_MESSAGE = """
@@ -73,7 +73,7 @@ BOOKING_RECEIPT = """
 ..........................................
 The Scary Movie
 Cinema Scary 666
-1 Hillview Drogheda Louth
+66 Laurence Street Louth
 
 You booked: {select_movie} \U0001F4D6
 
