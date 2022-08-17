@@ -83,7 +83,7 @@ You booked: {select_movie} \U0001F4D6
 """
 
 
-def enter_or_exit():
+def enter_or_exit() -> None:
     """Function to either continue to reserve or leave the Cinema Booking."""
 
     while True:
@@ -109,7 +109,7 @@ def enter_or_exit():
             )
 
 
-def order_movie():
+def order_movie() -> str:
     """
     Function to select a movie or leave the cinema booking.
     """
@@ -125,7 +125,7 @@ def order_movie():
         sys.exit()
 
 
-def user_data():
+def user_data() ->str:
     """Gets and check user's details"""
 
     print("\nTo complete the booking, please enter your details... \U0001F58A")
@@ -180,7 +180,7 @@ def user_data():
     return fname, lname, mnumber
 
 
-def validate_number(numbers):
+def validate_number(numbers) -> bool:
     """
     Validate mobile phone number
     """
@@ -193,7 +193,7 @@ def validate_number(numbers):
     return True
 
 
-def update_sheet(first_name, last_name, mobile_number, title, worksheet):
+def update_sheet(first_name, last_name, mobile_number, title, worksheet) -> None:
     """
     Function to update the Google Sheet with the user's details and selected
     movie.
@@ -202,7 +202,7 @@ def update_sheet(first_name, last_name, mobile_number, title, worksheet):
     add_data.append_row([first_name, last_name, mobile_number, title])
 
 
-def print_receipt(selected_movie):
+def print_receipt(selected_movie) -> None:
     """ "
     Function to print the receipt selected by user
     """
@@ -215,7 +215,7 @@ def print_receipt(selected_movie):
     )
 
 
-def start_app():
+def start_app() -> None:
     """
     Main function, which includes all functions to run the program
     """
@@ -227,7 +227,7 @@ def start_app():
     print_receipt(select_movie)
 
 
-def main():
+def main() -> None:
     while True:
         welcome_title = pyfiglet.figlet_format("The Scary Movie")
         print(welcome_title)
