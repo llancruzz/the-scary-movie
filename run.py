@@ -68,7 +68,7 @@ We'll send you a text message 1 hour before the movie starts \U0001F4F2
 And here is your receipt \U0001F9FE:
 """
 
-BOOKING_RECIEPT = """
+BOOKING_RECEIPT = """
 
 ..........................................
 The Scary Movie
@@ -181,7 +181,7 @@ def user_data():
 
 
 def validate_number(numbers):
-    """ "
+    """
     Validate mobile phone number
     """
     if len(numbers) != 10:
@@ -211,7 +211,7 @@ def print_receipt(selected_movie):
     now = datetime.now()
     booking_time = now.strftime("%d.%m.%Y %H:%M:%S")
     print(
-        BOOKING_RECIEPT.format(select_movie=selected_movie, booking_time=booking_time)
+        BOOKING_RECEIPT.format(select_movie=selected_movie, booking_time=booking_time)
     )
 
 
