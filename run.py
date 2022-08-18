@@ -49,7 +49,7 @@ Enter Y to see our movies lineup next week or N to exit:
 ORDER_MOVIE_MESSAGE = """
 
 If you wish to place a reservation, please enter the number of the movie you
-wish to the booking (i.e. 1 for 'The Innocents' 2 for 'Hellbender' and so on.).
+wish to the booking (i.e. 1 for 'The Innocents' 2 for 'Hellbender' and so on.
 
 If there is nothing on our list for you this week, no worries.
 
@@ -147,7 +147,7 @@ def user_data():
         if len(lname) < 1 or lname.isdigit():
             print(
                 """Hmmm....this doesn't seem right \U0001F914 """
-                """ Please make sure to enter a name!"""
+                """ Please make sure to enter a last name!"""
             )
             print("Let's start again \U0001F60A")
             continue
@@ -209,7 +209,7 @@ def print_receipt(selected_movie):
     print(BOOKING_CONFIRMATION_MSG)
     time.sleep(2)
     now = datetime.now()
-    booking_time = now.strftime("%d.%m.%Y %H:%M:%S")
+    booking_time = now.strftime("%d/%m/%Y %H:%M:%S")
     print(
         BOOKING_RECEIPT.format(select_movie=selected_movie, booking_time=booking_time)
     )
