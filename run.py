@@ -1,5 +1,6 @@
 """
-This is a python application to give users choice to book a scary movie to watch.
+This is a python application to give users choice
+to book a scary movie to watch.
 """
 
 import sys
@@ -115,7 +116,8 @@ def order_movie():
     """
     while True:
         print(ORDER_MOVIE_MESSAGE)
-        select_movie = input("Please enter the number or other key: ").strip() + "."
+        select_movie = input(
+            "Please enter the number or other key: ").strip() + "."
         if select_movie in MOVIE_LIST:
             selected_movie = MOVIE_LIST[select_movie]
             print(f"You have selected: {selected_movie} \U0001F608")
@@ -164,7 +166,8 @@ def user_data():
         check_details = input("Please enter now: ")
         check_details = check_details.strip()
         if check_details == "1":
-            print("Alright! \U0001F44D Let's finish your reservation \U0001F642")
+            print("Alright! \U0001F44D")
+            print("Let's finish your reservation \U0001F642")
             print("...................................")
             time.sleep(2)
             break
@@ -211,7 +214,8 @@ def print_receipt(selected_movie):
     now = datetime.now()
     booking_time = now.strftime("%d/%m/%Y %H:%M:%S")
     print(
-        BOOKING_RECEIPT.format(select_movie=selected_movie, booking_time=booking_time)
+        BOOKING_RECEIPT.format(select_movie=selected_movie,
+                               booking_time=booking_time)
     )
 
 
