@@ -83,6 +83,12 @@ You booked: {select_movie} \U0001F4D6
 
 """
 
+INCORRECT_LETTER = """
+I'm not sure you want to see the movies! \U0001F914
+Let's try again. Please make sure to enter Y or N
+
+"""
+
 
 def enter_or_exit():
     """Function to either continue to reserve or leave the Cinema Booking."""
@@ -99,15 +105,12 @@ def enter_or_exit():
             break
         elif decision_user == "n":
             print(
-                "Why? Don't be afraid!!! Take your time! Book whenever you're "
-                "already. Enjoy your day! \U0001F64B"
+                "Why? Don't be afraid!!! Take your time!"
+                "\nBook whenever you're already. Enjoy your day! \U0001F64B"
             )
             sys.exit()
         else:
-            print(
-                "I'm not sure you want to see the movies! \U0001F914"
-                "Let's try again. Please make sure to enter Y or N \n"
-            )
+            print(INCORRECT_LETTER)
 
 
 def order_movie():
@@ -221,7 +224,7 @@ def print_receipt(selected_movie):
 
 def start_app():
     """
-    Main function, which includes all functions to run the program
+    Start app function, which includes all functions to run the program
     """
     enter_or_exit()
     select_movie = order_movie()
@@ -232,6 +235,9 @@ def start_app():
 
 
 def main():
+    """
+    Main function, which includes all functions to run the program
+    """
     while True:
         welcome_title = pyfiglet.figlet_format("The Scary Movie")
         print(welcome_title)
