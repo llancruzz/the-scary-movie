@@ -8,7 +8,7 @@ The Scary Movie website is a CLI developed with Python language. The interface i
 
 ![Responsive Screenshot](../the-scary-movie/media/responsive.png)
 
-[View the live Website on Github Pages](put link final deployment here) Please note: To open any links in this document in a new browser tab, please press CTRL + Click.
+[View the live Website on Github Pages](https://the-scary-movie.herokuapp.com/) Please note: To open any links in this document in a new browser tab, please press CTRL + Click.
 
 ## Table Of Contents
 * [UX](#ux)
