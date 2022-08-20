@@ -36,6 +36,7 @@ MOVIE_LIST = {
     "8.": "Studio 666 - BJ McDonnell, €12.50, On Sunday - 21:00",
 }
 
+
 REPEAT_RESERVATION_MSG = """
 If you want to place another reservation,
 enter 1. If not, enter any other key.
@@ -76,7 +77,7 @@ The Scary Movie
 Cinema Scary 666
 66 Laurence Street Louth
 
-You booked: {select_movie} \U0001F4D6
+You booked: {select_movie} \U0001F608
 
 {booking_time}
 ..........................................
