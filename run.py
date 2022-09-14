@@ -36,18 +36,20 @@ MOVIE_LIST = {
     "8.": "Studio 666 - BJ McDonnell, €12.50, On Sunday - 21:00",
 }
 
-
+# Message of reservation
 REPEAT_RESERVATION_MSG = """
 If you want to place another reservation,
 enter 1. If not, enter any other key.
 """
 
+# Message list of movies
 LIST_MOVIES_MSG = """
 Are you tired of boring movies?
 Do you want to feel scared in some movies?
 Enter Y to see our movies lineup next week or N to exit:
 """
 
+# Message of order movie
 ORDER_MOVIE_MESSAGE = """
 
 If you wish to place a reservation, please enter the number of the movie you
@@ -59,6 +61,7 @@ Press any other key to leave the reserve. \U0001F642
 
 """
 
+# Message of booking confirmation
 BOOKING_CONFIRMATION_MSG = """
 Thank you for supporting your local Scary Cinema! \U0001F917
 
@@ -70,6 +73,7 @@ We'll send you a text message 1 hour before the movie starts \U0001F4F2
 And here is your receipt \U0001F9FE:
 """
 
+# Message booking of receipt
 BOOKING_RECEIPT = """
 
 ..........................................
@@ -84,6 +88,7 @@ You booked: {select_movie} \U0001F608
 
 """
 
+# Message of incorrect letter
 INCORRECT_LETTER = """
 I'm not sure you want to see the movies! \U0001F914
 Let's try again. Please make sure to enter Y or N
@@ -225,7 +230,7 @@ def print_receipt(selected_movie):
 
 def start_app():
     """
-    Start app function, which includes all functions to run the program
+    Start app function, which includes functions to start the program
     """
     enter_or_exit()
     select_movie = order_movie()
@@ -237,7 +242,7 @@ def start_app():
 
 def main():
     """
-    Main function, which includes all functions to run the program
+    Main function, which includes functions to run the program
     """
     while True:
         welcome_title = pyfiglet.figlet_format("The Scary Movie")
