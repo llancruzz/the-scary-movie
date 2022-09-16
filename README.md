@@ -134,6 +134,12 @@ The Scary Movie website is a CLI developed with Python language. The interface i
   * ![python](media/python.png)
   * ![heroku](media/heroku.png)
 
+
+## Future Features
+
+  * To allow the user to enter the email and receive confirmation via email.
+  * To allow the user to print the PDF confirmation booking.
+
 ## Python Libraries
 ### Modules
 * Gspread - API for Google Sheets. Open a spreadsheet by title, key or url. Read, write, and format cell ranges.
@@ -167,7 +173,14 @@ The Scary Movie website is a CLI developed with Python language. The interface i
   * Enter the name of the repository we want to connect it with and click 'Connect'
   * The choice appears now to either deploy using automatic deploys or manual deployment, which deploys the current state of the branch.
   * Click deploy branch.
+
+* How to run the program. The steps to run the program are as follow:
+
+ * To start the program again, the user must return to the beginning where it says "RUN PROGRAM" and click with the right mouse button or refresh the page.
   
+  * To run a backend Python file, type python3 app.py, if your Python file is named app.py of course.
+
+
 
  The live link can be found here - [The Scary Movie](https://the-scary-movie.herokuapp.com/)
 
